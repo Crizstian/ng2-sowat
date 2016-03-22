@@ -7,16 +7,14 @@
 
 .data-oulet{
   font-family: 'PT Sans', sans-serif;
-  background-image: linear-gradient(to bottom,#FFFFFF,#EBEBEB);
+  background-color: white;
+  background: #ffffff;
 }
 body{
   height: auto;
 }
 // Small screens
 @media only screen {
-  body{
-    border: 2px solid yellow;
-  }
   @include menu-1;
   @include home-1;
   @include asoc-1;
