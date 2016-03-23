@@ -1,8 +1,4 @@
-@mixin intro {
-
-}
-
-@mixin home-1 {
+@mixin principal {
   .principal{
     position: relative;
     background-color: #1f2738;
@@ -49,6 +45,10 @@
       }
     }
   }
+}
+
+@mixin home-1 {
+  @include principal;
   .bienvenida{
     .grid-us{
       .column{
@@ -175,7 +175,7 @@
             width: 100%;
             height: 100%;
             .title{
-              padding-top: 1.6em;
+              padding-top: 2em;
               font-size: 1.7rem;
               text-align: center;
             }
@@ -195,41 +195,6 @@
             &:hover{
               background-color: #273138;
               color: white
-            }
-          }
-        }
-        img{
-          display: block;
-          width: 100%;
-          height: 100%;
-        }
-      }
-    }
-    .grid-us-4{
-      .column{
-        padding: 0;
-        .callout{
-          background: none;
-          border: none;
-          height: 280px;
-          padding: 0;
-          margin: 0;
-          .text{
-            background-color: #DDEDF2;
-            color: #273138;
-            padding: 2em;
-            font-size: 1.4rem;
-            width: 100%;
-            height: 100%;
-            &:hover{
-              background-color: #273138;
-              color: white
-            }
-            span{
-              font-size: 1.1rem;
-              margin-top: 1.3em;
-              font-weight: 200;
-              border-bottom: 3px solid white;
             }
           }
         }
@@ -281,55 +246,7 @@
 }
 
 @mixin home-2 {
-  .principal{
-    position: relative;
-    background-color: #1f2738;
-    height: 600px;
-    max-height: 600px;
-    min-height: 380px;
-    text-align: center;
-    width: 100%;
-    margin: 0;
-    overflow: hidden;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    .image{
-      background-image: url("../img/hero-home-xl.jpg");
-      filter: blur(5px);
-      height: 600px;
-      width: 100%;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: 50% 0;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-    }
-    .menu-head{
-      position: absolute;
-      margin: 0;
-      width: 100%;
-      z-index: 999;
-    }
-    .container {
-      // background-color: rgba(255,255,255,0.1);
-      color: white;
-      // padding: 1em 15px;
-
-      padding-right: 15px;
-      padding-left: 15px;
-      margin-right: auto;
-      margin-left: auto;
-      text-align: left;
-      position: relative;
-      z-index: 2;
-      h2{
-        font-family: 'Raleway', sans-serif;
-        font-size: 3.5em;
-      }
-    }
-  }
+  @include principal;
   .bienvenida{
     .grid-us{
       .column{
@@ -343,7 +260,7 @@
           .text{
             background-color: #1BCE7C;
             color: white;
-            padding: 4.5em 2em 2em 2em;
+            padding: 3em 2em 2em 2em;
             width: 100%;
             height: 100%;
             .title{
@@ -353,14 +270,21 @@
               font-size: 1.2rem;
               text-align: center;
             }
+            .banner{
+              position: absolute;
+              padding-left: 1.5em;
+              padding-bottom: 1.5em;
+              bottom: 0;
+              left: 0;
+              span{
+                font-size: 1.1rem;
+                margin-top: 1.3em;
+                font-weight: 200;
+                border-bottom: 3px solid white;
+              }
+            }
             &:hover{
               background-color: #273138;
-            }
-            span{
-              font-size: 1.2rem;
-              padding-top: 1.5em;
-              font-weight: 300;
-              border-bottom: 5px solid white;
             }
           }
         }
@@ -387,18 +311,45 @@
             width: 100%;
             height: 100%;
             .title{
-              padding: 1em 0;
+              padding: 2.5em 0 0 0;
               font-size: 1.8rem;
               text-align: center;
             }
+            .banner{
+              position: absolute;
+              padding-left: 1.5em;
+              padding-bottom: 1.5em;
+              bottom: 0;
+              left: 0;
+              span{
+                font-size: 1.1rem;
+                margin-top: 1.3em;
+                font-weight: 200;
+                border-bottom: 3px solid white;
+              }
+            }
+            .hollow{
+              border: 1px solid white;
+              color: white;
+              &:hover{
+                border: 1px solid white;
+                color: white;
+              }
+            }
             &:hover{
               background-color: #273138;
+              color: white;
+              .hollow{
+                border: 1px solid white;
+                color: white;
+                &:hover{
+                  border: 1px solid #eff7f9;
+                  color: #eff7f9;
+                }
+              }
             }
-            span{
-              font-size: 1.2rem;
-              padding-top: 1.5em;
-              font-weight: 300;
-              border-bottom: 5px solid white;
+            &:hover{
+              background-color: #273138;
             }
           }
         }
@@ -450,31 +401,198 @@
         }
       }
     }
-    .grid-us-4{
+  }
+  .clientes{
+    .callout{
+      background: none;
+      border: none;
+    }
+    img{
+			display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 10em;
+			height: 10em;
+		  filter: grayscale(100%); filter: grayscale(100%);
+      &:hover{
+        filter: grayscale(0%); filter: grayscale(0%);
+  			cursor: pointer;
+      }
+    }
+  }
+  .who-we-are{
+    .hollow{
+      border: 0px solid black;
+    }
+    .text{
+      padding: 1.5em;
+      h1{
+        text-align: center;
+        padding: 1em 0;
+        font-size: 2.4rem;
+      }
+      h3{
+        text-align: center;
+        font-size: 2em;
+      }
+      p{
+        padding-bottom: 1em;
+        text-align: justify;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@mixin home-3 {
+  @include principal;
+  .bienvenida{
+    .grid-us{
       .column{
         padding: 0;
         .callout{
           background: none;
           border: none;
-          height: 280px;
+          height: 400px;
+          padding: 0;
+          margin: 0;
+          .text{
+            background-color: #1BCE7C;
+            color: white;
+            padding: 0.5em;
+            width: 100%;
+            height: 100%;
+            .title{
+              padding: 1em 1em 0.5em 1em;
+              font-size: 1.7rem;
+            }
+            .description{
+              padding: 1em;
+              font-size: 1.2rem;
+              text-align: center;
+            }
+            .banner{
+              position: absolute;
+              padding-left: 1.5em;
+              padding-bottom: 1.5em;
+              bottom: 0;
+              left: 0;
+              span{
+                font-size: 1.1rem;
+                margin-top: 1.3em;
+                font-weight: 200;
+                border-bottom: 3px solid white;
+              }
+            }
+            &:hover{
+              background-color: #273138;
+            }
+          }
+        }
+        img{
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .grid-us-2{
+      .column{
+        padding: 0;
+        .callout{
+          background: none;
+          border: none;
+          height: 450px;
+          padding: 0;
+          margin: 0;
+          .text{
+            background-color: #1BCE7C;
+            color: white;
+            padding: 2em;
+            font-size: 1.8rem;
+            width: 100%;
+            height: 100%;
+            .banner{
+              position: absolute;
+              padding-left: 1.5em;
+              padding-bottom: 1.5em;
+              bottom: 0;
+              left: 0;
+              span{
+                font-size: 1.1rem;
+                margin-top: 1.3em;
+                font-weight: 200;
+                border-bottom: 3px solid white;
+              }
+            }
+            .hollow{
+              border: 1px solid white;
+              color: white;
+              &:hover{
+                border: 1px solid white;
+                color: white;
+              }
+            }
+            &:hover{
+              background-color: #273138;
+              color: white;
+              .hollow{
+                border: 1px solid white;
+                color: white;
+                &:hover{
+                  border: 1px solid #eff7f9;
+                  color: #eff7f9;
+                }
+              }
+            }
+            &:hover{
+              background-color: #273138;
+            }
+          }
+        }
+        img{
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .grid-us-3{
+      .column{
+        padding: 0;
+        .callout{
+          background: none;
+          border: none;
+          height: 350px;
           padding: 0;
           margin: 0;
           .text{
             background-color: #DDEDF2;
             color: #273138;
-            padding: 2em;
-            font-size: 1.4rem;
+            padding: 0.5em;
             width: 100%;
             height: 100%;
+            .title{
+              padding-top: 3em;
+              font-size: 1.7rem;
+              text-align: center;
+            }
+            .banner{
+              position: absolute;
+              padding-left: 1.5em;
+              padding-bottom: 1.5em;
+              bottom: 0;
+              left: 0;
+              span{
+                font-size: 1.1rem;
+                margin-top: 1.3em;
+                font-weight: 200;
+                border-bottom: 3px solid #273138;
+              }
+            }
             &:hover{
               background-color: #273138;
               color: white
-            }
-            span{
-              font-size: 1.1rem;
-              margin-top: 1.3em;
-              font-weight: 200;
-              border-bottom: 3px solid white;
             }
           }
         }
@@ -495,8 +613,8 @@
 			display: block;
       margin-left: auto;
       margin-right: auto;
-      width: 10em;
-			height: 10em;
+      width: 11em;
+			height: 11em;
 		  filter: grayscale(100%); filter: grayscale(100%);
       &:hover{
         filter: grayscale(0%); filter: grayscale(0%);
@@ -525,56 +643,8 @@
   }
 }
 
-@mixin home-3 {
-  .principal{
-    position: relative;
-    background-color: #1f2738;
-    height: 600px;
-    max-height: 600px;
-    min-height: 380px;
-    text-align: center;
-    width: 100%;
-    margin: 0;
-    overflow: hidden;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    .image{
-      background-image: url("../img/hero-home-xl.jpg");
-      filter: blur(5px);
-      height: 600px;
-      width: 100%;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: 50% 0;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-    }
-    .menu-head{
-      position: absolute;
-      margin: 0;
-      width: 100%;
-      z-index: 999;
-    }
-    .container {
-      // background-color: rgba(255,255,255,0.1);
-      color: white;
-      // padding: 1em 15px;
-
-      padding-right: 15px;
-      padding-left: 15px;
-      margin-right: auto;
-      margin-left: auto;
-      text-align: left;
-      position: relative;
-      z-index: 2;
-      h2{
-        font-family: 'Raleway', sans-serif;
-        font-size: 3.5em;
-      }
-    }
-  }
+@mixin home-4 {
+  @include principal;
   .bienvenida{
     .grid-us{
       .column{
@@ -588,26 +658,33 @@
           .text{
             background-color: #1BCE7C;
             color: white;
-            padding: 1.2em;
+            padding: 0.5em;
             width: 100%;
             height: 100%;
             .title{
-              padding: 1em;
-              font-size: 1.8rem;
+              padding: 1em 1em 0.5em 1em;
+              font-size: 1.7rem;
             }
             .description{
               padding: 1em;
-              font-size: 1.4rem;
+              font-size: 1.2rem;
               text-align: center;
+            }
+            .banner{
+              position: absolute;
+              padding-left: 1.5em;
+              padding-bottom: 1.5em;
+              bottom: 0;
+              left: 0;
+              span{
+                font-size: 1.1rem;
+                margin-top: 1.3em;
+                font-weight: 200;
+                border-bottom: 3px solid white;
+              }
             }
             &:hover{
               background-color: #273138;
-            }
-            span{
-              font-size: 1.2rem;
-              padding-top: 1.5em;
-              font-weight: 300;
-              border-bottom: 5px solid white;
             }
           }
         }
@@ -630,18 +707,45 @@
           .text{
             background-color: #1BCE7C;
             color: white;
-            padding: 1.2em;
+            padding: 2em;
             font-size: 1.8rem;
             width: 100%;
             height: 100%;
+            .banner{
+              position: absolute;
+              padding-left: 1.5em;
+              padding-bottom: 1.5em;
+              bottom: 0;
+              left: 0;
+              span{
+                font-size: 1.1rem;
+                margin-top: 1.3em;
+                font-weight: 200;
+                border-bottom: 3px solid white;
+              }
+            }
+            .hollow{
+              border: 1px solid white;
+              color: white;
+              &:hover{
+                border: 1px solid white;
+                color: white;
+              }
+            }
             &:hover{
               background-color: #273138;
+              color: white;
+              .hollow{
+                border: 1px solid white;
+                color: white;
+                &:hover{
+                  border: 1px solid #eff7f9;
+                  color: #eff7f9;
+                }
+              }
             }
-            span{
-              font-size: 1.2rem;
-              padding-top: 1.5em;
-              font-weight: 300;
-              border-bottom: 5px solid white;
+            &:hover{
+              background-color: #273138;
             }
           }
         }
@@ -664,15 +768,20 @@
           .text{
             background-color: #DDEDF2;
             color: #273138;
-            padding: 2em;
+            padding: 0.5em;
             width: 100%;
             height: 100%;
             .title{
-              padding-top: 1.6em;
+              padding-top: 3em;
               font-size: 1.7rem;
               text-align: center;
             }
-            .description{
+            .banner{
+              position: absolute;
+              padding-left: 1.5em;
+              padding-bottom: 1.5em;
+              bottom: 0;
+              left: 0;
               span{
                 font-size: 1.1rem;
                 margin-top: 1.3em;
@@ -693,41 +802,6 @@
         }
       }
     }
-    .grid-us-4{
-      .column{
-        padding: 0;
-        .callout{
-          background: none;
-          border: none;
-          height: 350px;
-          padding: 0;
-          margin: 0;
-          .text{
-            background-color: #DDEDF2;
-            color: #273138;
-            padding: 4em 2em;
-            font-size: 1.4rem;
-            width: 100%;
-            height: 100%;
-            &:hover{
-              background-color: #273138;
-              color: white
-            }
-            span{
-              font-size: 1.1rem;
-              margin-top: 1.3em;
-              font-weight: 200;
-              border-bottom: 3px solid white;
-            }
-          }
-        }
-        img{
-          display: block;
-          width: 100%;
-          height: 100%;
-        }
-      }
-    }
   }
   .clientes{
     .callout{
@@ -735,15 +809,15 @@
       border: none;
     }
     img{
-			display: block;
+      display: block;
       margin-left: auto;
       margin-right: auto;
       width: 11em;
-			height: 11em;
-		  filter: grayscale(100%); filter: grayscale(100%);
+      height: 11em;
+      filter: grayscale(100%); filter: grayscale(100%);
       &:hover{
         filter: grayscale(0%); filter: grayscale(0%);
-  			cursor: pointer;
+        cursor: pointer;
       }
     }
   }

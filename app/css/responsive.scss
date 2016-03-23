@@ -30,7 +30,7 @@ body{
 // Medium screens
 @media only screen and (min-width: 40.063em) {
   body{
-    border: 2px solid green;
+    // border: 2px solid green;
   }
   @include menu-2;
   @include home-2;
@@ -47,7 +47,7 @@ body{
 // Large screens
 @media only screen and (min-width: 64.063em) {
   body{
-    border: 2px solid red;
+    // border: 2px solid red;
   }
   @include menu-3;
   @include home-3;
@@ -63,7 +63,7 @@ body{
 // XLarge screens
 @media only screen and (min-width: 90.063em) {
   body{
-    border: 2px solid blue;
+    // border: 2px solid blue;
   }
   @include menu-4;
   @include home-3;
@@ -80,7 +80,7 @@ body{
 // XXLarge screens
 @media only screen and (min-width: 120.063em) {
   @include menu-4;
-  @include home-3;
+  @include home-4;
   @include asoc-3;
   @include nosotros-3;
   @include contacto-1;
