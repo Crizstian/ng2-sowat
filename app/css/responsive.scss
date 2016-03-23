@@ -6,12 +6,32 @@
 @import "contacto";
 
 .data-oulet{
-  font-family: 'PT Sans', sans-serif;
+  // font-family: 'PT Sans', sans-serif;
+  font-family: Open Sans,Trebuchet MS,sans-serif;
   background-color: white;
   background: #ffffff;
 }
 body{
   height: auto;
+}
+hr.dotted {
+    border-style: dashed;
+    margin: 2rem 0;
+}
+.effect-steve {
+	overflow: visible;
+	background: #000;
+}
+.effect-steve p{
+	transition: transform 0.35s;
+	transform: scale3d(0.9,0.9,1);
+}
+.effect-steve:hover {
+  cursor: pointer;
+}
+.effect-steve:hover p {
+	opacity: 1;
+	transform: scale3d(1,1,1);
 }
 // Small screens
 @media only screen {
@@ -66,7 +86,7 @@ body{
     // border: 2px solid blue;
   }
   @include menu-4;
-  @include home-3;
+  @include home-4;
   @include asoc-3;
   @include nosotros-3;
   @include contacto-1;

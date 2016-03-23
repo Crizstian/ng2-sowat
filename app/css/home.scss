@@ -1,3 +1,6 @@
+$grid-us-color: #1BCE7C;
+$grid-us-3-color: #DDEDF2;
+
 @mixin principal {
   .principal{
     position: relative;
@@ -48,7 +51,61 @@
 }
 
 @mixin home-1 {
-  @include principal;
+  .principal{
+    position: relative;
+    background-color: #1f2738;
+    height: 600px;
+    max-height: 600px;
+    min-height: 380px;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    .image{
+      background-image: url("../img/hero-home-xl.jpg");
+      filter: blur(20px);
+      height: 600px;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 0;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+    .menu-head{
+      position: absolute;
+      margin: 0;
+      width: 100%;
+      z-index: 999;
+    }
+    .container {
+      color: white;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+      text-align: left;
+      position: relative;
+      z-index: 2;
+      h1{
+        font-size: 3em;
+        font-weight: 300;
+        padding: 0.1em 0;
+      }
+      h2{
+        font-size: 1.8em;
+        font-weight: 200;
+      }
+      h3{
+        font-size: 2em;
+        font-weight: 200;
+      }
+    }
+  }
   .bienvenida{
     .grid-us{
       .column{
@@ -62,7 +119,7 @@
           .text{
             background-color: #1BCE7C;
             color: white;
-            padding: 2em;
+            padding: 2em 1em;
             width: 100%;
             height: 100%;
             .title{
@@ -103,18 +160,18 @@
         .callout{
           background: none;
           border: none;
-          color: #273138;
           height: 300px;
           padding: 0;
           margin: 0;
           .text{
-            background-color: #eff7f9;
-            padding: 2em;
+            background-color: #1BCE7C;
+            color: white;
+            padding: 1em;
             width: 100%;
             height: 100%;
             .title{
-              padding: 0.5em 0;
-              font-size: 1.7rem;
+              padding-top: 1em;
+              font-size: 2rem;
               text-align: center;
             }
             .banner{
@@ -127,12 +184,12 @@
                 font-size: 1.1rem;
                 margin-top: 1.3em;
                 font-weight: 200;
-                border-bottom: 3px solid #273138;
+                border-bottom: 3px solid white;
               }
             }
             .hollow{
-              border: 1px solid #273138;
-              color: #273138;
+              border: 1px solid white;
+              color: white;
               &:hover{
                 border: 1px solid white;
                 color: white;
@@ -149,6 +206,9 @@
                   color: #eff7f9;
                 }
               }
+            }
+            &:hover{
+              background-color: #273138;
             }
           }
         }
@@ -225,28 +285,96 @@
     }
   }
   .who-we-are{
+    .button.hollow{
+      border: none;
+      color: $grid-us-color;
+      &:hover{
+        color: orange;
+      }
+    }
     .text{
       padding: 1.5em;
       h1{
         text-align: center;
         padding: 1em 0;
-        font-size: 2.4rem;
+        font-size: 2.5rem;
+        color: #273138;
+        font-weight: 200;
+        line-height: 1.14286;
       }
       h3{
         text-align: center;
         font-size: 2em;
+        color: #273138;
+        font-weight: 300;
+        line-height: 1.14286;
+        padding: 0.5em;
       }
       p{
-        padding-bottom: 1em;
-        text-align: justify;
+        text-align: center;
         font-size: 1.2rem;
+        color: #273138;
       }
     }
   }
 }
 
 @mixin home-2 {
-  @include principal;
+  .principal{
+    position: relative;
+    background-color: #1f2738;
+    height: 600px;
+    max-height: 600px;
+    min-height: 380px;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    .image{
+      background-image: url("../img/hero-home-xl.jpg");
+      filter: blur(20px);
+      height: 600px;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 0;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+    .menu-head{
+      position: absolute;
+      margin: 0;
+      width: 100%;
+      z-index: 999;
+    }
+    .container {
+      color: white;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+      text-align: left;
+      position: relative;
+      z-index: 2;
+      h1{
+        font-size: 3.5em;
+        font-weight: 300;
+        padding: 0.3em 0;
+      }
+      h2{
+        font-size: 2em;
+        font-weight: 200;
+      }
+      h3{
+        font-size: 2.3em;
+        font-weight: 200;
+      }
+    }
+  }
   .bienvenida{
     .grid-us{
       .column{
@@ -311,9 +439,8 @@
             width: 100%;
             height: 100%;
             .title{
-              padding: 2.5em 0 0 0;
-              font-size: 1.8rem;
-              text-align: center;
+              padding-top: 1.5em;
+              font-size: 3rem;
             }
             .banner{
               position: absolute;
@@ -421,31 +548,89 @@
     }
   }
   .who-we-are{
-    .hollow{
-      border: 0px solid black;
-    }
     .text{
       padding: 1.5em;
       h1{
         text-align: center;
         padding: 1em 0;
-        font-size: 2.4rem;
+        font-size: 3rem;
+        color: #273138;
+        font-weight: 200;
+        line-height: 1.14286;
       }
       h3{
         text-align: center;
-        font-size: 2em;
+        font-size: 2.5em;
+        color: #273138;
+        font-weight: 300;
+        line-height: 1.14286;
+        padding: 1.5em;
       }
       p{
-        padding-bottom: 1em;
-        text-align: justify;
+        text-align: center;
         font-size: 1.2rem;
+        color: #273138;
       }
     }
   }
 }
 
 @mixin home-3 {
-  @include principal;
+  .principal{
+    position: relative;
+    background-color: #1f2738;
+    height: 700px;
+    max-height: 700px;
+    min-height: 380px;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    .image{
+      background-image: url("../img/hero-home-xl.jpg");
+      filter: blur(20px);
+      height: 700px;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 0;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+    .menu-head{
+      position: absolute;
+      margin: 0;
+      width: 100%;
+      z-index: 999;
+    }
+    .container {
+      color: white;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+      text-align: left;
+      position: relative;
+      z-index: 2;
+      h1{
+        font-size: 4em;
+        font-weight: 300;
+        padding: 0.5em 0;
+      }
+      h2{
+        font-size: 2.5em;
+        font-weight: 200;
+      }
+      h3{
+        font-size: 2.8em;
+        font-weight: 200;
+      }
+    }
+  }
   .bienvenida{
     .grid-us{
       .column{
@@ -464,7 +649,8 @@
             height: 100%;
             .title{
               padding: 1em 1em 0.5em 1em;
-              font-size: 1.7rem;
+              font-size: 1.6rem;
+              text-align: center;
             }
             .description{
               padding: 1em;
@@ -508,10 +694,12 @@
           .text{
             background-color: #1BCE7C;
             color: white;
-            padding: 2em;
-            font-size: 1.8rem;
+            padding: 1.5em;
             width: 100%;
             height: 100%;
+            .title{
+              font-size: 2.5rem;
+            }
             .banner{
               position: absolute;
               padding-left: 1.5em;
@@ -628,23 +816,84 @@
       h1{
         text-align: center;
         padding: 1em 0;
-        font-size: 2.4rem;
+        font-size: 3.5rem;
+        color: #273138;
+        font-weight: 200;
+        line-height: 1.14286;
       }
       h3{
         text-align: center;
-        font-size: 2em;
+        font-size: 3em;
+        color: #273138;
+        font-weight: 300;
+        line-height: 1.14286;
+        padding: 1.2em;
       }
       p{
-        padding-bottom: 1em;
-        text-align: justify;
-        font-size: 1.2rem;
+        text-align: center;
+        font-size: 1.5rem;
+        color: #273138;
       }
     }
   }
 }
 
 @mixin home-4 {
-  @include principal;
+  .principal{
+    position: relative;
+    background-color: #1f2738;
+    height: 900px;
+    max-height: 900px;
+    min-height: 380px;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    .image{
+      background-image: url("../img/hero-home-xl.jpg");
+      filter: blur(20px);
+      height: 900px;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 0;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+    .menu-head{
+      position: absolute;
+      margin: 0;
+      width: 100%;
+      z-index: 999;
+    }
+    .container {
+      color: white;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+      text-align: left;
+      position: relative;
+      z-index: 2;
+      h1{
+        font-size: 4.5em;
+        font-weight: 300;
+        padding: 0.7em 0;
+      }
+      h2{
+        font-size: 2.8em;
+        font-weight: 200;
+      }
+      h3{
+        font-size: 3em;
+        font-weight: 200;
+      }
+    }
+  }
   .bienvenida{
     .grid-us{
       .column{
@@ -658,15 +907,15 @@
           .text{
             background-color: #1BCE7C;
             color: white;
-            padding: 0.5em;
+            padding: 1em;
             width: 100%;
             height: 100%;
             .title{
-              padding: 1em 1em 0.5em 1em;
+              padding: 3em 1em 0.5em 1em;
               font-size: 1.7rem;
             }
             .description{
-              padding: 1em;
+              padding: 0em 1em 1em 1em;
               font-size: 1.2rem;
               text-align: center;
             }
@@ -707,10 +956,12 @@
           .text{
             background-color: #1BCE7C;
             color: white;
-            padding: 2em;
-            font-size: 1.8rem;
+            padding: 2em 1em;
             width: 100%;
             height: 100%;
+            .title{
+              font-size: 3.5rem;
+            }
             .banner{
               position: absolute;
               padding-left: 1.5em;
@@ -772,7 +1023,7 @@
             width: 100%;
             height: 100%;
             .title{
-              padding-top: 3em;
+              padding-top: 4.1em;
               font-size: 1.7rem;
               text-align: center;
             }
@@ -823,20 +1074,27 @@
   }
   .who-we-are{
     .text{
-      padding: 1.5em;
+      padding: 2em;
       h1{
         text-align: center;
         padding: 1em 0;
-        font-size: 2.4rem;
+        font-size: 4rem;
+        color: #273138;
+        font-weight: 200;
+        line-height: 1.14286;
       }
       h3{
         text-align: center;
-        font-size: 2em;
+        font-size: 3.2em;
+        color: #273138;
+        font-weight: 300;
+        line-height: 1.14286;
+        padding: 1.2em;
       }
       p{
-        padding-bottom: 1em;
-        text-align: justify;
-        font-size: 1.2rem;
+        text-align: center;
+        font-size: 1.8rem;
+        color: #273138;
       }
     }
   }
