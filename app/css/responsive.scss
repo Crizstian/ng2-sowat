@@ -1,7 +1,7 @@
 @import "menu";
 @import "nosotros";
 @import "home";
-@import "asociados";
+@import "servicios";
 @import "footer";
 @import "contacto";
 
@@ -33,11 +33,20 @@ hr.dotted {
 	opacity: 1;
 	transform: scale3d(1,1,1);
 }
+.effect-img img{
+  transition: all 0.3s linear;
+  transform: scale3d(1, 1, 1);
+  transform: perspective(1000px) translate3d(0,0,0);
+}
+.effect-img:hover img{
+  transform: scale3d(1.2, 1.2, 1);
+  transform: perspective(1000px) translate3d(0,0,21px);
+}
 // Small screens
 @media only screen {
   @include menu-1;
   @include home-1;
-  @include asoc-1;
+  @include servicios-1;
   @include nosotros-1;
   @include contacto-1;
   @include footer-4;
@@ -50,11 +59,11 @@ hr.dotted {
 // Medium screens
 @media only screen and (min-width: 40.063em) {
   body{
-    // border: 2px solid green;
+    border: 2px solid green;
   }
   @include menu-2;
   @include home-2;
-  @include asoc-2;
+  @include servicios-2;
   @include nosotros-2;
   @include contacto-1;
   @include footer-4;
@@ -67,11 +76,11 @@ hr.dotted {
 // Large screens
 @media only screen and (min-width: 64.063em) {
   body{
-    // border: 2px solid red;
+    border: 2px solid red;
   }
   @include menu-3;
   @include home-3;
-  @include asoc-3;
+  @include servicios-3;
   @include nosotros-3;
   @include contacto-1;
   @include footer-4;
@@ -83,11 +92,11 @@ hr.dotted {
 // XLarge screens
 @media only screen and (min-width: 90.063em) {
   body{
-    // border: 2px solid blue;
+    border: 2px solid blue;
   }
   @include menu-4;
   @include home-4;
-  @include asoc-3;
+  @include servicios-3;
   @include nosotros-3;
   @include contacto-1;
   @include footer-4;
@@ -101,7 +110,7 @@ hr.dotted {
 @media only screen and (min-width: 120.063em) {
   @include menu-4;
   @include home-4;
-  @include asoc-3;
+  @include servicios-3;
   @include nosotros-3;
   @include contacto-1;
   @include footer-4;

@@ -1,7 +1,5 @@
 import {Injectable}  from 'angular2/core';
 import {Http}              from 'angular2/http';
-import {Cervecero}   from '../models/cervecero';
-import {ASOCIADOS}   from './mock-asociado';
 import {Logger}            from './Logger.service';
 import {Observable}        from 'rxjs/Observable';
 

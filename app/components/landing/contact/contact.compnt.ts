@@ -4,13 +4,13 @@ import {FormBuilder,FORM_DIRECTIVES,
         Validators}           from 'angular2/common';
 import {RouteParams, Router,
         RouterLink}           from 'angular2/router';
-import {CustomValidators}     from '../../Validators/custom-validators';
-import {EmailService}         from '../../services/email.service';
+import {CustomValidators}     from '../../../Validators/custom-validators';
+import {EmailService}         from '../../../services/email.service';
 
 @Component({
   selector   : 'contact',
   directives : [FORM_DIRECTIVES,RouterLink],
-  templateUrl: 'app/components/contact/templates/contacto.html'
+  templateUrl: 'app/components/landing/contact/templates/contacto.html'
 })
 export class ContactCompnt{
 
