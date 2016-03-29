@@ -66,7 +66,7 @@
         p{
           padding: 1em 1em 0 1em;
           font-size:  0.9375rem;
-          line-height: 1.6;
+          line-height: 1.9;
           margin-bottom: 1rem;
           color: #273138;
           text-rendering: optimizeLegibility;
@@ -212,9 +212,219 @@
 }
 
 @mixin servicios-3 {
+  .servicios{
+    padding: 1.25em;
+    .column{
+      padding: 0;
+      .callout{
+        background: none;
+        border: 1px solid #eee;
+        height: 280px;
+        padding: 0;
+        margin: 0;
+        img{
+          min-height: 280px;
+          max-height: 280px;
+        }
+        .text{
+          background-color: #1BCE7C;
+          color: white;
+          padding: 2em 1em;
+          width: 100%;
+          height: 100%;
+          .title{
+            font-size: 1.6rem;
+          }
+          .description{
+            font-size: 1.2rem;
+            text-align: center;
+          }
+          .banner{
+            position: absolute;
+            padding-left: 1.5em;
+            padding-bottom: 1.5em;
+            bottom: 0;
+            left: 0;
+            span{
+              font-size: 1.1rem;
+              margin-top: 1.3em;
+              font-weight: 200;
+              border-bottom: 3px solid white;
+            }
+          }
+          &:hover{
+            background-color: #273138;
+          }
+        }
+      }
+    }
+    .outer{
+      padding: 1em;
+      .text{
+        h1{
+          font-size: 2.5rem;
+          color: #273138;
+          font-weight: 200;
+          line-height: 1.14286;
+          text-align: center;
+        }
+        h2{
+          font-size: 1.8rem;
+          color: #273138;
+          font-weight: 200;
+          line-height: 1.14286;
+          text-align: center;
+        }
+        h3{
+          font-size: 1.6rem;
+          font-weight: 200;
+          text-align: center;
+          color: #8a8a8a;
+        }
+        p{
+          padding: 1.5em;
+          font-size:  1.15rem;
+          line-height: 2;
+          margin-bottom: 1rem;
+          color: #273138;
+          text-rendering: optimizeLegibility;
+        }
+      }
+    }
+    .vertical-feature-block{
+      .columns{
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
+        h3{
+          color: #273138;
+          font-weight: 200;
+          font-size: 1.05rem;
+          text-transform: uppercase;
+          padding: 1.05em 0;
+          letter-spacing: .1em;
+        }
+        p{
+          padding: 0em;
+          font-size:  0.9375rem;
+          line-height: 1.6;
+          margin-bottom: 1rem;
+          color: #273138;
+          text-rendering: optimizeLegibility;
+        }
+        img {
+          display: block;
+          padding: 1.25rem;
+          margin: 1rem auto 0 auto;
+          height: 65%;
+          width: 75%;
 
+        }
+      }
+    }
+  }
 }
 
 @mixin servicios-4 {
+  .servicios{
+    padding: 1.25em;
+    .column{
+      padding: 0;
+      .callout{
+        background: none;
+        border: 1px solid #eee;
+        height: 280px;
+        padding: 0;
+        margin: 0;
+        img{
+          min-height: 280px;
+          max-height: 280px;
+        }
+        .text{
+          background-color: #1BCE7C;
+          color: white;
+          padding: 2em 1em;
+          width: 100%;
+          height: 100%;
+          .title{
+            font-size: 1.6rem;
+          }
+          .description{
+            font-size: 1.2rem;
+            text-align: center;
+          }
+          .banner{
+            position: absolute;
+            padding-left: 1.5em;
+            padding-bottom: 1.5em;
+            bottom: 0;
+            left: 0;
+            span{
+              font-size: 1.1rem;
+              margin-top: 1.3em;
+              font-weight: 200;
+              border-bottom: 3px solid white;
+            }
+          }
+          &:hover{
+            background-color: #273138;
+          }
+        }
+      }
+    }
+    .outer{
+      padding: 1em;
+      .text{
+        h1{
+          font-size: 3rem;
+          color: #273138;
+          font-weight: 200;
+          line-height: 1.14286;
+          text-align: center;
+        }
+        h2{
+          font-size: 2.3rem;
+          color: #273138;
+          font-weight: 200;
+          line-height: 1.14286;
+          text-align: center;
+        }
+        h3{
+          font-size: 2rem;
+          font-weight: 200;
+          text-align: center;
+          color: #8a8a8a;
+        }
+        p{
+          padding: 1.5em;
+          font-size:  1.25rem;
+          line-height: 2;
+          margin-bottom: 1rem;
+          color: #273138;
+          text-rendering: optimizeLegibility;
+        }
+      }
+    }
+    .vertical-feature-block{
+      .columns{
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
+        h3{
+          color: #273138;
+          font-weight: 200;
+          font-size: 1.15rem;
+          text-transform: uppercase;
+          padding: 1.05em 0;
+          letter-spacing: .1em;
+        }
+        img {
+          display: block;
+          padding: 1.25rem;
+          margin: 1rem auto 0 auto;
+          height: 65%;
+          width: 65%;
 
+        }
+      }
+    }
+  }
 }
